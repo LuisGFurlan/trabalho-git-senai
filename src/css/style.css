@@ -8,6 +8,8 @@
     --cinza-medio:#9ca3af;
     --preto:#0b0b0d;
     --branco:#ffffff;
+    --flash-message-erro: #ff4500;
+    --flash-message-sucesso: rgb(0, 197, 0);
 }
 
 *, *::before, *::after{ box-sizing:border-box; }
@@ -132,6 +134,7 @@ nav{
     display:inline-block; padding:.35rem .6rem; margin:.25rem; border-radius:999px; background: var(--cinza); color:#111827; font-size:.8rem; border:1px solid #dbdee3;
 }
 
+/* Newsletter no Index, feito por Gustavo. */
 .newsletter_form{
     display: flex;
     flex-flow: column wrap;
@@ -171,6 +174,24 @@ nav{
     cursor: pointer;
     transform: scale(105%);
     transition: ease;
+}
+
+.newsletter_form > p#nome_vazio, .newsletter_form > p#email_invalido{
+    display: none;
+    margin-top: 0px;
+    background-color: var(--flash-message-erro);
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.newsletter_form > p#mensagem_sucesso{
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 0px;
+    background-color: var(--flash-message-sucesso);
+    font-size: 0.9em;
+    padding: 5px;
 }
 
 footer{
