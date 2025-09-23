@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TheBranchNews</title>
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+  <link rel="icon" type="image/png" href="src/img/favicon.png">
+</head>
+<body>  
+  <header>
+    <div class="header_interno">
+      <div class="marca" aria-label="Marca">
+        <div class="marca_logo" aria-hidden="true">JT</div>
+        <div class="marca_name">TheBranchNews</div>
+      </div>
+      <nav aria-label="Navegação principal">
+        <a class="nav_link" href="#">Início</a> 
+        <a class="nav_link" href="#">Contato</a> 
+        <a class="nav_link" href="#">Sobre Nós</a> 
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner" role="region" aria-labelledby="destaque">
+    <div class="banner_interno">
+      <div>
+        <span class="chip">Destaque</span>
+        <h1 id="destaque">IA brasileira acelera o desenvolvimento de software</h1>
+        <p>Novos modelos locais reduzem custos de nuvem e permitem ciclos de release mais rápidos para equipes dev no Brasil. Especialistas apontam ganho de produtividade de até 32% em revisões de código.</p>
+        <a class="readmore" href="#">Ler reportagem</a>
+      </div>
+      <aside class="banner_side" aria-label="Mais lidas">
+        <div class="side-titulo">Mais lidas</div>
+        <div class="side-item">
+          <div>
+            <b>Framework X 3.0</b><br/>
+            <small>Novas APIs de streaming e melhoria de DX</small>
+          </div>
+        </div>
+        <div class="side-item">
+          <div>
+            <b>Guia: Segurança em produção</b><br/>
+            <small>Checklist prático para equipes pequenas</small>
+          </div>
+        </div>
+        <div class="side-item">
+          <div>
+            <b>Entrevista: CTO da Nexum</b><br/>
+            <small>Como escalar com qualidade</small>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main class="container" role="main">
+    <div class="grid">
+        <div id="conteudo">
+            
+        </div>
+      <aside class="sidebar" aria-label="Barra lateral">
+        <div class="noticias-container">
+          <h2>Últimas Notícias</h2>
+          <ul id="ultimas-noticias"></ul>
+        </div>
+        
+
+        <div class="extra">
+          <div class="extra_head">Newsletter</div>
+          <div class="extra_body">
+            <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias da bolha tech:</p>
+            <form action="#" method="get" class="newsletter_form">
+                <label for="email">Seu Nome</label>
+                <input type="text" id="email" placeholder="Nome">
+                <label for="email">Seu E-mail</label>
+                <input type="text" id="email" placeholder="E-mail">
+                <div class="newsletter_botoes">
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer_interno">
+      <div>© 2025 TheBranchNews</div>
+    </div>
+  </footer>
+</body>
+<script src="src/js/noticias.js"></script>
+<script src="src/js/ultimasNoticias.js"></script>
+</html>
