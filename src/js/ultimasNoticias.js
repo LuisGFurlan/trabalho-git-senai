@@ -36,8 +36,8 @@ async function getNoticiasRSS() {
 }
 
 getNoticiasRSS();
-// Arquivo: /src/js/contato.js
-// Validação e envio do formulário de contato (CORRIGIDO: Adicionadas funções faltantes para regex funcionar)
+
+// Validação e envio do formulário de contato
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('formContato');
   const nomeInput = document.getElementById('nome');
@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const erroNome = document.getElementById('erroNome');
   const erroEmail = document.getElementById('erroEmail');
   const erroTelefone = document.getElementById('erroTelefone');
-  // Criar span para erro da mensagem se não existir (ADICIONADO)
   let erroMensagem = document.getElementById('erroMensagem');
   if (!erroMensagem) {
       erroMensagem = document.createElement('span');
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       erroMensagem.id = 'erroMensagem';
       mensagemInput.parentNode.appendChild(erroMensagem);
   }
-  // Máscara para telefone (formato brasileiro: (99) 99999-9999) - Mantido do seu código
+  // Máscara para telefone (formato brasileiro: (99) 99999-9999)
   telefoneInput.addEventListener('input', function(e) {
       let value = e.target.value.replace(/\D/g, ''); // Remove não dígitos
       if (value.length >= 11) {
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       e.target.value = value;
   });
-  // ADICIONADO: Função para limpar erros (faltava no seu código)
+  // Função para limpar erros 
   function limparErros() {
     [erroNome, erroEmail, erroTelefone, erroMensagem].forEach(erro => {
         erro.textContent = '';
@@ -80,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     if (mensagemSucesso) mensagemSucesso.style.display = 'none';
 }
- // ADICIONADO: Função de validação genérica (faltava no seu código)
+ // Função de validação genérica
  function validarCampo(input, erro, mensagemErro, validacao) {
   if (!validacao(input.value)) {
       erro.textContent = mensagemErro;
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return true;
   }
 }
-    // ADICIONADO: Validações específicas com regex (faltavam no seu código)
+    // Validações específicas com regex 
     function validarNome(nome) {
         return nome.trim().length >= 2;
     }
@@ -109,15 +108,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function validarMensagem(mensagem) {
         return mensagem.trim().length >= 10;
     }
-    // ADICIONADO: Validação em tempo real (ao sair do campo) - Para UX melhor
+    // Validação em tempo real (ao sair do campo) - Para UX melhor
     nomeInput.addEventListener('blur', () => validarCampo(nomeInput, erroNome, 'Nome deve ter pelo menos 2 caracteres.', validarNome));
     emailInput.addEventListener('blur', () => validarCampo(emailInput, erroEmail, 'E-mail inválido (ex: voce@exemplo.com).', validarEmail));
     telefoneInput.addEventListener('blur', () => validarCampo(telefoneInput, erroTelefone, 'Telefone deve estar no formato (99) 99999-9999.', validarTelefone));
     mensagemInput.addEventListener('blur', () => validarCampo(mensagemInput, erroMensagem, 'Mensagem deve ter pelo menos 10 caracteres.', validarMensagem));
-    // Submit do form (seu código mantido, mas agora com funções completas)
+    // Submit do form 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      limparErros(); // Agora funciona
+      limparErros();
       let isValid = true;
       isValid &= validarCampo(nomeInput, erroNome, 'Nome deve ter pelo menos 2 caracteres.', validarNome);
       isValid &= validarCampo(emailInput, erroEmail, 'E-mail inválido (ex: voce@exemplo.com).', validarEmail);
@@ -133,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
           console.log('Dados enviados:', dados); // Para debug
           
-          // Mostrar sucesso (usando div novo, sem alert)
+          // Mostrar sucesso 
           if (mensagemSucesso) {
               mensagemSucesso.style.display = 'block';
               mensagemSucesso.scrollIntoView({ behavior: 'smooth' });
