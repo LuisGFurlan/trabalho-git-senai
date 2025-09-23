@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TheBolha</title>
-  <link rel="stylesheet" href="/src/css/style.css">
- 
+  <title>TheBranchNews</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="icon" type="image/png" href="src/img/favicon.png">
 </head>
 <body>  
   <header>
     <div class="header_interno">
       <div class="marca" aria-label="Marca">
         <div class="marca_logo" aria-hidden="true">JT</div>
-        <div class="marca_name">TheBolha</div>
+        <div class="marca_name">TheBranchNews</div>
       </div>
       <nav aria-label="Navegação principal">
         <a class="nav_link" href="#">Início</a> 
@@ -102,17 +102,11 @@
       </section>
 
       <aside class="sidebar" aria-label="Barra lateral">
-        <div class="extra">
-          <div class="extra_head">Categorias</div>
-          <div class="extra_body">
-            <a class="tag" href="#">Programação</a>
-            <a class="tag" href="#">IA/ML</a>
-            <a class="tag" href="#">Segurança</a>
-            <a class="tag" href="#">Mobile</a>
-            <a class="tag" href="#">Web</a>
-            <a class="tag" href="#">Cloud</a>
-          </div>
+        <div class="noticias-container">
+          <h2>Últimas Notícias</h2>
+          <ul id="ultimas-noticias"></ul>
         </div>
+        
 
         <div class="extra">
           <div class="extra_head">Newsletter</div>
@@ -136,8 +130,9 @@
 
   <footer>
     <div class="footer_interno">
-      <div>© 2025 TheBolha</div>
+      <div>© 2025 TheBranchNews</div>
     </div>
   </footer>
 </body>
+<script src="src/js/ultimasNoticias.js"></script>
 </html>
