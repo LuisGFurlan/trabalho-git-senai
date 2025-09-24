@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TheBranchNews</title>
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
   <link rel="icon" type="image/png" href="src/img/favicon.png">
 </head>
 <body>  
@@ -16,8 +16,8 @@
       </div>
       <nav aria-label="Navegação principal">
         <a class="nav_link" href="#">Início</a> 
-        <a class="nav_link" href="#">Contato</a> 
-        <a class="nav_link" href="#">Sobre Nós</a> 
+        <a class="nav_link" href="contatos.html">Contato</a> 
+        <a class="nav_link" href="sobre.html">Sobre Nós</a> 
       </nav>
     </div>
   </header>
@@ -63,7 +63,7 @@
             <div class="card_img" aria-hidden="true"></div>
             <div class="card_body">
               <div class="card_kicker">Programação</div>
-              <h3 class="card_titulo"><a href="#">TypeScript 6: o que muda para quem trabalha com APIs</a></h3>
+              <h3 class="card_titulo"><a href="noticias.html?id=1">TypeScript 6: o que muda para quem trabalha com APIs</a></h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non libero nesciunt id animi adipisci saepe fugiat, dolores hic perferendis expedita delectus placeat accusantium itaque officiis perspiciatis asperiores? Maxime, delectus rem.</p>
               <div class="card_footer">há 2h · Por Redação</div>
             </div>
@@ -113,14 +113,20 @@
           <div class="extra_body">
             <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias da bolha tech:</p>
             <form action="#" method="get" class="newsletter_form">
-                <label for="email">Seu Nome</label>
-                <input type="text" id="email" placeholder="Nome">
+                <label for="nome">Seu Nome</label>
+                <input type="text" id="nome" placeholder="Nome" required>
+                <p id="nome_vazio">O campo Nome está vazio.</p>
+
                 <label for="email">Seu E-mail</label>
-                <input type="text" id="email" placeholder="E-mail">
+                <input type="text" id="email" placeholder="E-mail" required>
+                <p id="email_invalido">Digite um e-mail válido.</p>
+
                 <div class="newsletter_botoes">
                     <button type="reset">Limpar</button>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" id="btn_enviar">Enviar</button>
                 </div>
+
+                <p id="mensagem_sucesso">Sucesso! Obrigado por assinar!</p>
             </form>
           </div>
         </div>
@@ -135,4 +141,5 @@
   </footer>
 </body>
 <script src="src/js/ultimasNoticias.js"></script>
+<script src="src/js/indexRegex.js"></script>
 </html>

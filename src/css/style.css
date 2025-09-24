@@ -8,6 +8,8 @@
     --cinza-medio:#9ca3af;
     --preto:#0b0b0d;
     --branco:#ffffff;
+    --flash-message-erro: #ff0000;
+    --flash-message-sucesso: rgb(0, 197, 0);
 }
 
 *, *::before, *::after{ box-sizing:border-box; }
@@ -126,12 +128,13 @@ nav{
     display:flex; flex-direction:column; gap:1rem;
 }
 .extra{ border:1px solid #e6e6ea; border-radius:14px; background: var(--branco); }
-.extra_head{ padding:.75rem 1rem; border-bottom:1px solid #e6e6ea; background: var(--cinza); font-weight:700; }
+.extra_head{ padding:.75rem 1rem; border-bottom:1px solid #e6e6ea; border-radius:14px 14px 0px 0px; background: var(--cinza); font-weight:700; }
 .extra_body{ padding: .75rem 1rem; }
 .tag{
     display:inline-block; padding:.35rem .6rem; margin:.25rem; border-radius:999px; background: var(--cinza); color:#111827; font-size:.8rem; border:1px solid #dbdee3;
 }
 
+/* Newsletter no Index, feito por Gustavo. */
 .newsletter_form{
     display: flex;
     flex-flow: column wrap;
@@ -163,7 +166,7 @@ nav{
     border: none;
     margin: 10px;
     padding: 5px 10px;
-    border-radius: 0px;
+    border-radius: 5px;
     font-size: 1em;
 }
 
@@ -171,6 +174,26 @@ nav{
     cursor: pointer;
     transform: scale(105%);
     transition: ease;
+}
+
+.newsletter_form > p#nome_vazio, .newsletter_form > p#email_invalido{
+    display: none;
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 5px;
+    color: var(--flash-message-erro);
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.newsletter_form > p#mensagem_sucesso{
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 0px;
+    color: var(--flash-message-sucesso);
+    font-size: 0.9em;
+    padding: 5px;
 }
 
 footer{
@@ -232,11 +255,72 @@ footer{
     .list{ grid-template-columns: 1fr; }
 }
 
-/* início css página sobre.html */
-.sobre-titulo{
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
-    font-weight: 800;
-    margin: .25rem 0 1.25rem;
+
+/* Estilo para mensagens de erro */
+.erro {
+    color: #dc2626;
+    font-size: 0.8em;
+    margin-top: 4px;
+    display: block;
+    min-height: 1em;
+}
+/* Mostrar labels visíveis no form de contato */
+#formContato > label {
+    display: block !important;
+    font-weight: 600;
+    margin-bottom: 4px;
     color: var(--preto);
-  }
-  
+    font-size: 0.95em;
+}
+/* Estilo para inputs e textarea (melhorando newsletter_form) */
+#formContato > input,
+#formContato > textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 0.9em;
+    background: var(--branco);
+    transition: border-color 0.2s ease;
+    resize: vertical; /* Só para textarea */
+}
+#formContato > input:focus,
+#formContato > textarea:focus {
+    outline: none;
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
+}
+#formContato > input:hover,
+#formContato > textarea:hover {
+    border-color: var(--roxo-escuro);
+}
+/* Botão de submit */
+#formContato .newsletter_botoes > button {
+    background: var(--roxo);
+    color: var(--branco);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+}
+#formContato .newsletter_botoes > button:hover {
+    background: var(--roxo-escuro);
+}
+/* Mensagem de sucesso */
+.form-sucesso {
+    background: #10b981;
+    color: var(--branco);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
