@@ -116,5 +116,41 @@
       </div>
     </section>
 
+    <section class="sobre-resumo" aria-labelledby="resumo">
+      <h2 id="resumo" class="section-titulo">Quem somos</h2>
+      <p>
+        Somos 5 estudantes de ADS do UniSenai de Joinville/SC e desenvolvemos este projeto sobre as bolhas do mundo tech a partir de um trabalho em grupo. A graça aqui é justamente encarar o GitHub PELA PRIMEIRA VEZ em equipe: cada um na sua branch, commit pra todo lado, PR aberto, uns conflitos pra animar o dia e o merge maroto no final. A ideia do site é cutucar o hype — IA, cripto, gadgets, valuations e afins — e explicar o que é fumaça e o que tem chance de virar algo útil. No caminho, a gente dividiu páginas, alinhou visual, escreveu mensagens de commit e resolveu tudo na conversa. No fim das contas, é conteúdo sem enrolação + prática real de Git e trabalho em equipe.
+      </p>
+    </section>
+    
+    <section class="sobre-sugestao" aria-labelledby="sugestao-titulo">
+      <h2 id="sugestao-titulo" class="section-titulo">ALGUMA SUGESTÃO PARA NOSSO PROJETO?</h2>
+      <form id="form-sugestao" class="form-sugestao" novalidate>
+        <label class="sr-only" for="sugestao">Sua sugestão</label>
+        <textarea id="sugestao" name="sugestao" rows="5" maxlength="300" placeholder="Escreva sua sugestão aqui (max. 300 caracteres)"></textarea>
+        <div class="ajuda-contador">
+          <small><span id="contador">0</span>/300</small>
+        </div>
+
+        <div class="campo-email">
+          <label for="email">Seu e-mail</label>
+          <input type="email" id="email" name="email" placeholder="nome@exemplo.com">
+        </div>
+
+        <button type="submit" class="nav_link" nav_link--cta>Enviar sugestão</button>
+        <p id="erro-form" class="erro" role="alert" aria-live="polite"></p>
+        <p id="ok-form" class="ok" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer_interno">
+      <div>© 2025 TheBranchNews</div>
+    </div>
+  </footer>
+
+
+
 </body>
 </html>
