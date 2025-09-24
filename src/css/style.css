@@ -231,3 +231,12 @@ footer{
     .grid{ grid-template-columns: 1fr; }
     .list{ grid-template-columns: 1fr; }
 }
+
+/* início css página sobre.html */
+.sobre-titulo{
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin: .25rem 0 1.25rem;
+    color: var(--preto);
+  }
+  
