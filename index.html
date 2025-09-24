@@ -112,7 +112,7 @@
           <div class="extra_head">Newsletter</div>
           <div class="extra_body">
             <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias da bolha tech:</p>
-            <form action="#" method="get" class="newsletter_form">
+            <form action="#" method="get" class="newsletter_form" onsubmit="event.preventDefault()">
                 <label for="nome">Seu Nome</label>
                 <input type="text" id="nome" placeholder="Nome" required>
                 <p id="nome_vazio">O campo Nome está vazio.</p>
@@ -126,6 +126,7 @@
                     <button type="submit" id="btn_enviar">Enviar</button>
                 </div>
 
+                <p id="mensagem_erro">Erro! Preencha corretamente os campos.</p>
                 <p id="mensagem_sucesso">Sucesso! Obrigado por assinar!</p>
             </form>
           </div>
