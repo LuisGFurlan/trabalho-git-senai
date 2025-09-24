@@ -232,7 +232,7 @@ footer{
     .list{ grid-template-columns: 1fr; }
 }
 
-/* ADICIONE AO FINAL DO style.css: Estilos para erros, form e sucesso */
+
 /* Estilo para mensagens de erro */
 .erro {
     color: #dc2626;
