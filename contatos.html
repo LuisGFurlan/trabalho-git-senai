@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - TheBolha</title>
+  <link rel="stylesheet" href="/src/css/style.css"/>
+  <script src="/src/js/ultimasNoticias.js" defer></script>
+</head>
+<body>
+  <!-- Cabeçalho com classes do seu CSS -->
+  <header>
+    <div class="header_interno">
+      <a href="index.html" class="marca">
+        <div class="marca_logo">JT</div>
+        <div class="marca_name">TheBranchNews</div>
+      </a>
+
+      <nav>
+        <a class="nav_link" href="index.html">Início</a>
+        <a class="nav_link" href="contatos.html">Contato</a>
+        <a class="nav_link nav_link--cta" href="sobre.html">Sobre Nós</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="container">
+    <h2 class="section-titulo">Entre em Contato</h2>
+
+    <!-- Usei suas classes de newsletter para estilizar inputs/botão -->
+    <form id="formContato" class="newsletter_form" action="#" method="post" novalidate>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      <span id="erroNome" class="erro"></span>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required />
+      <span id="erroEmail" class="erro"></span>
+
+      <label for="telefone">Telefone</label>
+      <input type="text" id="telefone" name="telefone" placeholder="(99) 99999-9999" required />
+      <span id="erroTelefone" class="erro"></span>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required style="padding:10px;border:1px solid black;border-radius:5px;margin-bottom:5px;"></textarea>
+
+      <div class="newsletter_botoes">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Rodapé opcional para ver o tema completo -->
+  <footer>
+    <div class="footer_interno">
+      <span>© TheBolha</span>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </footer>
+</body>
+</html>
