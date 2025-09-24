@@ -254,3 +254,73 @@ footer{
     .grid{ grid-template-columns: 1fr; }
     .list{ grid-template-columns: 1fr; }
 }
+
+
+/* Estilo para mensagens de erro */
+.erro {
+    color: #dc2626;
+    font-size: 0.8em;
+    margin-top: 4px;
+    display: block;
+    min-height: 1em;
+}
+/* Mostrar labels visíveis no form de contato */
+#formContato > label {
+    display: block !important;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--preto);
+    font-size: 0.95em;
+}
+/* Estilo para inputs e textarea (melhorando newsletter_form) */
+#formContato > input,
+#formContato > textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 0.9em;
+    background: var(--branco);
+    transition: border-color 0.2s ease;
+    resize: vertical; /* Só para textarea */
+}
+#formContato > input:focus,
+#formContato > textarea:focus {
+    outline: none;
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
+}
+#formContato > input:hover,
+#formContato > textarea:hover {
+    border-color: var(--roxo-escuro);
+}
+/* Botão de submit */
+#formContato .newsletter_botoes > button {
+    background: var(--roxo);
+    color: var(--branco);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+}
+#formContato .newsletter_botoes > button:hover {
+    background: var(--roxo-escuro);
+}
+/* Mensagem de sucesso */
+.form-sucesso {
+    background: #10b981;
+    color: var(--branco);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
