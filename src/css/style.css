@@ -8,6 +8,8 @@
     --cinza-medio:#9ca3af;
     --preto:#0b0b0d;
     --branco:#ffffff;
+    --flash-message-erro: #ff0000;
+    --flash-message-sucesso: rgb(0, 197, 0);
 }
 
 *, *::before, *::after{ box-sizing:border-box; }
@@ -126,12 +128,13 @@ nav{
     display:flex; flex-direction:column; gap:1rem;
 }
 .extra{ border:1px solid #e6e6ea; border-radius:14px; background: var(--branco); }
-.extra_head{ padding:.75rem 1rem; border-bottom:1px solid #e6e6ea; background: var(--cinza); font-weight:700; }
+.extra_head{ padding:.75rem 1rem; border-bottom:1px solid #e6e6ea; border-radius:14px 14px 0px 0px; background: var(--cinza); font-weight:700; }
 .extra_body{ padding: .75rem 1rem; }
 .tag{
     display:inline-block; padding:.35rem .6rem; margin:.25rem; border-radius:999px; background: var(--cinza); color:#111827; font-size:.8rem; border:1px solid #dbdee3;
 }
 
+/* Newsletter no Index, feito por Gustavo. */
 .newsletter_form{
     display: flex;
     flex-flow: column wrap;
@@ -163,7 +166,7 @@ nav{
     border: none;
     margin: 10px;
     padding: 5px 10px;
-    border-radius: 0px;
+    border-radius: 5px;
     font-size: 1em;
 }
 
@@ -171,6 +174,26 @@ nav{
     cursor: pointer;
     transform: scale(105%);
     transition: ease;
+}
+
+.newsletter_form > p#nome_vazio, .newsletter_form > p#email_invalido{
+    display: none;
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 5px;
+    color: var(--flash-message-erro);
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+.newsletter_form > p#mensagem_sucesso{
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 0px;
+    color: var(--flash-message-sucesso);
+    font-size: 0.9em;
+    padding: 5px;
 }
 
 footer{
