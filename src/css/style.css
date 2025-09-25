@@ -126,11 +126,19 @@ nav{
     display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem;
 }
 
+.agrid{
+    justify-items: center;
+}
 
+.noticia-conteudo{
+    font-size: 130%;
+    font-family: arial;
+}
 .sidebar{
     display:flex; flex-direction:column; gap:1rem;
 }
-.extra{ border:1px solid #e6e6ea; border-radius:14px; background: var(--branco); }
+.extra{ border:1px solid #e6e6ea; border-radius:14px; background: var(--branco);}
+.noticias-extra{ border:1px solid #e6e6ea; border-radius:14px; background: var(--branco); width: 720px; text-align: center;}
 .extra_head{ padding:.75rem 1rem; border-bottom:1px solid #e6e6ea; border-radius:14px 14px 0px 0px; background: var(--cinza); font-weight:700; }
 .extra_body{ padding: .75rem 1rem; }
 .tag{
