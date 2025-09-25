@@ -20,13 +20,9 @@ html, body {
     margin: 0;
   }
   
-  body {
-    display: flex;
-    flex-direction: column;
-  }
   
   main {
-    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+    flex: 1; 
   }
   
 
