@@ -21,6 +21,9 @@ body{
     background: var(--branco);
     line-height: 1.5;
 }
+main {
+    flex: 1;
+  } 
 a{ color: inherit; text-decoration: none; }
 img{ max-width:100%; display:block; }
 
@@ -134,7 +137,7 @@ nav{
     display:inline-block; padding:.35rem .6rem; margin:.25rem; border-radius:999px; background: var(--cinza); color:#111827; font-size:.8rem; border:1px solid #dbdee3;
 }
 
-/* Newsletter no Index, feito por Gustavo. */
+/* Newsletter no Index*/
 .newsletter_form{
     display: flex;
     flex-flow: column wrap;
