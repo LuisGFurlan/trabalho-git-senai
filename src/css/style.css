@@ -15,7 +15,20 @@
 }
 
 *, *::before, *::after{ box-sizing:border-box; }
-html,body{ height:100%; }
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+  }
+  
 
 .tema_escuro {
     --background: #121212; /* Fundo geral do tema escuro */
