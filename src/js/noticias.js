@@ -1,4 +1,4 @@
-function validaFormulario(){
+function validaFormulario(event){
   event.preventDefault()
   let nome = document.getElementById('nome').value
   let email = document.getElementById('email').value
