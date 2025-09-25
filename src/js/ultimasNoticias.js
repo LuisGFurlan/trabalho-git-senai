@@ -16,7 +16,7 @@ async function getNoticiasRSS() {
     const res = await fetch(apiUrl);
 
     if (!res.ok) throw new Error(`Erro HTTP: ${res.status}`);
-
+    console.log(res);
     const data = await res.json();
 
     data.items.slice(0, 5).forEach(n => {
