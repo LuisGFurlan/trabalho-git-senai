@@ -6,12 +6,13 @@
   <title>TheBranchNews</title>
   <link rel="stylesheet" type="text/css" href="src/css/style.css">
   <link rel="icon" type="image/png" href="src/img/favicon.png">
+  <script src="src/js/altTema.js"></script>
 </head>
 <body>  
   <header>
     <div class="header_interno">
       <div class="marca" aria-label="Marca">
-        <div class="marca_logo" aria-hidden="true">JT</div>
+        <div class="marca_logo" aria-hidden="true">TBN</div>
         <div class="marca_name">TheBranchNews</div>
       </div>
       <nav aria-label="Navegação principal">
@@ -19,6 +20,7 @@
         <a class="nav_link" href="contatos.html">Contato</a> 
         <a class="nav_link" href="sobre.html">Sobre Nós</a> 
       </nav>
+      <button id="alt-tema" aria-label="Alternar tema">🌙</button>
     </div>
   </header>
 
@@ -70,7 +72,7 @@
           </article>
 
           <article class="card">
-            <div class="card_img" aria-hidden="true"><img style='height: 170px; width: 100%;'src='/src/img/img_noticia_java_25.webp' alt='Imagem Logo Java 25'></div>
+            <div class="card_img" aria-hidden="true"><img style='height: 170px; width: 100%;'src='/src/img/img_java.png' alt='Imagem Logo Java 25'></div>
             <div class="card_body">
               <div class="card_kicker">Inteligência Artificial</div>
               <h3 class="card_titulo"><a href="noticias.html?id=3">Java 25: a nova era da linguagem com foco em produtividade, IA e segurança</a></h3>
@@ -111,8 +113,8 @@
         <div class="extra">
           <div class="extra_head">Newsletter</div>
           <div class="extra_body">
-            <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias da bolha tech:</p>
-            <form action="#" method="get" class="newsletter_form" onsubmit="event.preventDefault()">
+            <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias da The Branch News:</p>
+            <form action="#" method="get" class="newsletter_form">
                 <label for="nome">Seu Nome</label>
                 <input type="text" id="nome" placeholder="Nome" required>
                 <p id="nome_vazio">O campo Nome está vazio.</p>
@@ -126,8 +128,8 @@
                     <button type="submit" id="btn_enviar">Enviar</button>
                 </div>
 
-                <p id="mensagem_erro">Erro! Preencha corretamente os campos.</p>
-                <p id="mensagem_sucesso" >Sucesso! Obrigado por assinar!</p>
+                <p id="mensagem_erro">Erro! Preencha os campos corretamente.</p>
+                <p id="mensagem_sucesso">Sucesso! Obrigado por assinar!</p>
             </form>
           </div>
         </div>
@@ -143,4 +145,5 @@
 </body>
 <script src="src/js/ultimasNoticias.js"></script>
 <script src="src/js/indexRegex.js"></script>
+
 </html>

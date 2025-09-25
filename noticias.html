@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TheBranchNews</title>
   <link rel="stylesheet" type="text/css" href="src/css/style.css">
   <link rel="icon" type="image/png" href="src/img/favicon.png">
+  <script src="src/js/altTema.js"></script>
 </head>
-<body>  
+
+<body>
   <header>
     <div class="header_interno">
       <div class="marca" aria-label="Marca">
-        <div class="marca_logo" aria-hidden="true">JT</div>
+        <div class="marca_logo" aria-hidden="true">TBN</div>
         <div class="marca_name">TheBranchNews</div>
       </div>
       <nav aria-label="Navegação principal">
-        <a class="nav_link" href="index.html">Início</a> 
-        <a class="nav_link" href="contatos.html">Contato</a> 
-        <a class="nav_link" href="sobre.html">Sobre Nós</a>  
+        <a class="nav_link" href="index.html">Início</a>
+        <a class="nav_link" href="contatos.html">Contato</a>
+        <a class="nav_link" href="sobre.html">Sobre Nós</a>
       </nav>
+      <button id="alt-tema" aria-label="Alternar tema">🌙</button>
     </div>
   </header>
 
@@ -34,19 +38,19 @@
         <div class="side-titulo">Mais lidas</div>
         <div class="side-item">
           <div>
-            <b>Framework X 3.0</b><br/>
+            <b>Framework X 3.0</b><br />
             <small>Novas APIs de streaming e melhoria de DX</small>
           </div>
         </div>
         <div class="side-item">
           <div>
-            <b>Guia: Segurança em produção</b><br/>
+            <b>Guia: Segurança em produção</b><br />
             <small>Checklist prático para equipes pequenas</small>
           </div>
         </div>
         <div class="side-item">
           <div>
-            <b>Entrevista: CTO da Nexum</b><br/>
+            <b>Entrevista: CTO da Nexum</b><br />
             <small>Como escalar com qualidade</small>
           </div>
         </div>
@@ -56,23 +60,30 @@
 
   <main class="container" role="main">
     <div class="agrid">
-        <div class="noticia-conteudo" id="conteudo"></div>
+      <div class="noticia-conteudo" id="conteudo"></div>
       <aside class="sidebar" aria-label="Barra lateral">
       </aside>
-      
+
       <div class="noticias-extra">
         <div class="extra_head">Newsletter</div>
         <div class="extra_body">
           <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias do TheBranchNews</p>
-          <form method="get" class="newsletter_form" onsubmit="return validaFormulario(event)">
-              <label for="nome">Seu Nome</label>
-              <input type="text" id="nome" placeholder="Nome">
-              <label for="email">Seu E-mail</label>
-              <input type="text" id="email" placeholder="E-mail">
-              <div class="newsletter_botoes">
-                  <button type="reset">Limpar</button>
-                  <button type="submit">Enviar</button>
-              </div>
+          <form action="#" method="get" class="newsletter_form">
+            <label for="nome">Seu Nome</label>
+            <input type="text" id="nome" placeholder="Nome" required>
+            <p id="nome_vazio">O campo Nome está vazio.</p>
+
+            <label for="email">Seu E-mail</label>
+            <input type="text" id="email" placeholder="E-mail" required>
+            <p id="email_invalido">Digite um e-mail válido.</p>
+
+            <div class="newsletter_botoes">
+              <button type="reset">Limpar</button>
+              <button type="submit" id="btn_enviar">Enviar</button>
+            </div>
+
+            <p id="mensagem_erro">Erro! Preencha os campos corretamente.</p>
+            <p id="mensagem_sucesso">Sucesso! Obrigado por assinar!</p>
           </form>
           <p id="mensagem_erro" style="display: none;" >Erro! Preencha corretamente os campos.</p>
           <p id="mensagem_sucesso" style="display: none;">Sucesso! Obrigado por assinar!</p>
@@ -90,4 +101,6 @@
 <script src="src/js/noticias.js"></script>
 <script src="src/js/ultimasNoticias.js"></script>
 <script src="src/js/indexRegex.js"></script>
+<script src="src/js/altTema.js"></script>
+
 </html>
