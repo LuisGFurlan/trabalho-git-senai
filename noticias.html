@@ -64,7 +64,7 @@
         <div class="extra_head">Newsletter</div>
         <div class="extra_body">
           <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias do TheBranchNews</p>
-          <form method="get" class="newsletter_form" onsubmit="return validaFormulario()">
+          <form method="get" class="newsletter_form" onsubmit="return validaFormulario(event)">
               <label for="nome">Seu Nome</label>
               <input type="text" id="nome" placeholder="Nome">
               <label for="email">Seu E-mail</label>
@@ -74,6 +74,8 @@
                   <button type="submit">Enviar</button>
               </div>
           </form>
+          <p id="mensagem_erro" style="display: none;" >Erro! Preencha corretamente os campos.</p>
+          <p id="mensagem_sucesso" style="display: none;">Sucesso! Obrigado por assinar!</p>
         </div>
       </div>
     </div>
