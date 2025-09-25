@@ -190,6 +190,10 @@ nav{
     font-size:1.1rem; font-weight:800; margin: .25rem 0 .75rem; color: var(--preto);
 }
 
+.tema_escuro .section-titulo{
+    font-size:1.1rem; font-weight:800; margin: .25rem 0 .75rem; color: var(--roxo);
+}
+
 .list{
     display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem;
 }
@@ -336,15 +340,19 @@ footer{
     font-family: system-ui, sans-serif;
   }
   
-  .noticias-container h2 {
+.noticias-container h2 {
     font-size: 1.5rem;
     margin-bottom: 12px;
     border-left: 4px solid var(--roxo);
     padding-left: 8px;
     color: #333;
-  }
+}
 
- .tema_escuro .noticias-container h2{
+ .tema_escuro .noticias-container > h2{
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--roxo);
+    padding-left: 8px;
     color: var(--branco);
  }
   
@@ -383,16 +391,7 @@ footer{
 .tema_escuro #ultimas-noticias a:hover {
     color: #4ea8de;
 }
-  
 
-@media (max-width: 900px){
-    .banner_interno{ grid-template-columns: 1fr; }
-    .grid{ grid-template-columns: 1fr; }
-    .list{ grid-template-columns: 1fr; }
-}
-
-
-/* Estilo para mensagens de erro */
 .erro {
     color: #dc2626;
     font-size: 0.8em;
@@ -400,12 +399,18 @@ footer{
     display: block;
     min-height: 1em;
 }
-/* Mostrar labels visíveis no form de contato */
 #formContato > label {
     display: block !important;
     font-weight: 600;
     margin-bottom: 4px;
     color: var(--preto);
+    font-size: 0.95em;
+}
+.tema_escuro #formContato > label{
+    display: block !important;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--branco);
     font-size: 0.95em;
 }
 /* Estilo para inputs e textarea (melhorando newsletter_form) */
@@ -593,6 +598,11 @@ transform: scale(1.08);
   @media (max-width: 1100px){
     .equipe-grid{ grid-template-columns: repeat(3, 1fr); }
   }
+  @media (max-width: 900px){
+    .banner_interno{ grid-template-columns: 1fr; }
+    .grid{ grid-template-columns: 1fr; }
+    .list{ grid-template-columns: 1fr; }
+}
   @media (max-width: 700px){
     .equipe-grid{ grid-template-columns: repeat(2, 1fr); }
   }
