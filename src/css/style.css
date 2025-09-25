@@ -328,3 +328,68 @@ footer{
     font-weight: 500;
     display: none;
 }
+
+/* início css complementar para sobre.html */
+
+.sobre-titulo{
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin: .25rem 0 1.25rem;
+    color: var(--branco);
+    text-align: center;
+}
+
+.equipe-grid{
+    display: grid;/*p*/
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.membro{
+    text-align: center;
+    padding: 1rem .5rem;
+}
+
+.membro-foto{
+    display: grid;
+    place-items: center;
+    margin-bottom: .5rem;
+}
+
+.avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    object-fit: cover; /*p*/
+    border: 4px solid var(--roxo);
+    box-shadow: 0 8px 22px rgba(109,40,217,.25);
+}
+
+.membro-nome{
+    margin: .35rem 0 .1rem;
+    font-weight: 800;
+}
+
+.membro-funcao{
+    margin: 0 0 .4rem;
+    font-style: italic;
+    font-size: .9rem;
+}
+
+.membro-social{
+    display: flex;   
+    justify-content: center; 
+    gap: .6rem;
+}
+
+.membro-social img{
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform .15s ease;
+  }
+  
+  .membro-social a:hover img{
+    transform: scale(1.08);
+  }
