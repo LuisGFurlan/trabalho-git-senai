@@ -30,7 +30,7 @@ btnEnviar.addEventListener('click', function(e){
         flashMessageErro.style.display = "block";
         setTimeout(() => {
             flashMessageErro.style.display = "none";
-        }, 3000)
+        }, 5000)
         e.preventDefault();
     }
 })
