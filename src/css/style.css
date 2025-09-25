@@ -131,8 +131,8 @@ nav{
 .tema_escuro .card_kicker{
     color: var(--roxo)
 }
-.card_titulo{ margin:.25rem 0 .5rem; font-size:1.1rem; padding: 0px 8px; text-align: center; border-radius: 5px;}
-.card_titulo:hover{ background-color: var(--roxo);}
+.card_titulo{ margin:.25rem 0 .5rem; font-size:1.1rem; border-radius: 5px;}
+.card_titulo:hover{ cursor: pointer;}
 .card_footer{ color:#6b7280; font-size:.85rem; }
 
 .section-titulo{
