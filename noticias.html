@@ -27,9 +27,9 @@
     <div class="banner_interno">
       <div>
         <span class="chip">Destaque</span>
-        <h1 id="destaque">IA brasileira acelera o desenvolvimento de software</h1>
-        <p>Novos modelos locais reduzem custos de nuvem e permitem ciclos de release mais rápidos para equipes dev no Brasil. Especialistas apontam ganho de produtividade de até 32% em revisões de código.</p>
-        <a class="readmore" href="#">Ler reportagem</a>
+        <div id="materia-destaque">
+
+        </div>
       </div>
       <aside class="banner_side" aria-label="Mais lidas">
         <div class="side-titulo">Mais lidas</div>
@@ -56,32 +56,27 @@
   </section>
 
   <main class="container" role="main">
-    <div class="grid">
-        <div id="conteudo"></div>
+    <div class="agrid">
+        <div class="noticia-conteudo" id="conteudo"></div>
       <aside class="sidebar" aria-label="Barra lateral">
-        <div class="noticias-container">
-          <h2>Últimas Notícias</h2>
-          <ul id="ultimas-noticias"></ul>
-        </div>
-        
-
-        <div class="extra">
-          <div class="extra_head">Newsletter</div>
-          <div class="extra_body">
-            <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias da bolha tech:</p>
-            <form action="#" method="get" class="newsletter_form">
-                <label for="email">Seu Nome</label>
-                <input type="text" id="email" placeholder="Nome">
-                <label for="email">Seu E-mail</label>
-                <input type="text" id="email" placeholder="E-mail">
-                <div class="newsletter_botoes">
-                    <button type="reset">Limpar</button>
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-          </div>
-        </div>
       </aside>
+      
+      <div class="noticias-extra">
+        <div class="extra_head">Newsletter</div>
+        <div class="extra_body">
+          <p>Inscreva-se na nossa Newsletter e fique por dentro das principais notícias do TheBranchNews</p>
+          <form method="get" class="newsletter_form" onsubmit="return validaFormulario()">
+              <label for="nome">Seu Nome</label>
+              <input type="text" id="nome" placeholder="Nome">
+              <label for="email">Seu E-mail</label>
+              <input type="text" id="email" placeholder="E-mail">
+              <div class="newsletter_botoes">
+                  <button type="reset">Limpar</button>
+                  <button type="submit">Enviar</button>
+              </div>
+          </form>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -93,5 +88,6 @@
 </body>
 <script src="src/js/noticias.js"></script>
 <script src="src/js/ultimasNoticias.js"></script>
+<script src="src/js/indexRegex.js"></script>
 <script src="src/js/altTema.js"></script>
 </html>
