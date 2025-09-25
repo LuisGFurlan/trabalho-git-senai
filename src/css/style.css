@@ -76,6 +76,57 @@ header{
 .marca_name{
     font-size:1.6rem; font-weight:800; letter-spacing:.5px;
 }
+
+#alt-tema {
+    width: 44px;
+    height: 44px;
+    border: none;
+    outline: none;
+    background: var(--preto);
+    color: var(--branco);
+    border-radius: 50%;
+    
+    /* Cursor de interação */
+    cursor: pointer;
+    
+    /* Centraliza o ícone/texto */
+    display: grid;
+    place-items: center;
+    
+    /* Tamanho da fonte do ícone */
+    font-size: 1.5rem;
+    
+    /* Transição suave */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.1s ease;
+    
+    /* Efeito de sombra (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#alt-tema:hover {
+    /* Pequeno efeito ao passar o mouse */
+    transform: scale(1.05);
+    background: var(--roxo-escuro); /* Escurece um pouco o fundo ao passar o mouse */
+}
+
+#alt-tema:active {
+    /* Efeito de clique */
+    transform: scale(0.95);
+}
+
+/* Ajuste de estilo para o Tema Escuro */
+.tema_escuro #alt-tema {
+    /* Fundo e texto invertidos para o tema escuro */
+    background: var(--branco);
+    color: var(--preto);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.tema_escuro #alt-tema:hover {
+    /* Escurece um pouco o fundo ao passar o mouse no tema escuro */
+    background: var(--roxo-escuro);
+}
+
 nav{
     display:flex; gap:.75rem; flex-wrap:wrap;
 }
