@@ -332,6 +332,146 @@ footer{
     display: none;
 }
 
+/* início css complementar para sobre.html */
 
+.sobre-titulo{
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin: .25rem 0 1.25rem;
+    color: var(--branco);
+    text-align: center;
+}
+
+.equipe-grid{
+    display: grid;/*p*/
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.membro{
+    text-align: center;
+    padding: 1rem .5rem;
+}
+
+.membro-foto{
+    display: grid;
+    place-items: center;
+    margin-bottom: .5rem;
+}
+
+.avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    object-fit: cover; /*p*/
+    border: 4px solid var(--roxo);
+    box-shadow: 0 8px 22px rgba(109,40,217,.25);
+}
+
+.membro-nome{
+    margin: .35rem 0 .1rem;
+    font-weight: 800;
+}
+
+.membro-funcao{
+    margin: 0 0 .4rem;
+    font-style: italic;
+    font-size: .9rem;
+}
+
+.membro-social{
+    display: flex;   
+    justify-content: center; 
+    gap: .6rem;
+}
+
+.membro-social img{
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform .15s ease;
+}
+
+.membro-social a:hover img{
+transform: scale(1.08);
+}
+
+.sobre-resumo{
+    margin: 1.5rem 0 2rem;
+  }
+  .form-sugestao{
+    display: grid;
+    gap: .5rem;
+    max-width: 700px;
+  }
+  
+  .form-sugestao textarea{
+    resize: vertical;
+    min-height: 120px;
+    padding: .75rem .9rem;
+    border: 1px solid #e6e6ea;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .form-sugestao textarea:focus,
+  .form-sugestao input:focus{
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 3px rgba(109,40,217,.15);
+  }
+  
+  .ajuda-contador{
+    text-align: right;
+    color: var(--cinza-medio);
+  }
+  
+  .campo-email{
+    display: grid;
+    gap: .25rem;
+  }
+  
+  .campo-email input{
+    padding: .65rem .8rem;
+    border: 1px solid #e6e6ea;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .erro{
+    color: #b91c1c;
+    font-weight: 600;
+    min-height: 1.25rem;
+  }
+  
+  .ok{
+    color: #166534;
+    font-weight: 600;
+    min-height: 1.25rem;
+  }
+  .sr-only{
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  @media (max-width: 1100px){
+    .equipe-grid{ grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 700px){
+    .equipe-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 450px){
+    .equipe-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* fim css página sobre.html */
 
  
